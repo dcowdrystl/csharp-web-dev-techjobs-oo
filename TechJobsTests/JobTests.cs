@@ -41,5 +41,15 @@ namespace TechJobsTests
 
             Assert.IsTrue(!job1.Equals(job2));
         }
+
+        [TestMethod]
+        public void ToStringTest()
+        {
+            Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+            string output = " ";
+            Assert.AreEqual(output, job1.ToString());
+        
+        }
     }
 }
