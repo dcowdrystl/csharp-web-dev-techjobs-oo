@@ -19,8 +19,6 @@ namespace TechJobsTests
             Job job1 = new Job();
             Job job2 = new Job();
             Assert.IsTrue(job1.Id != job2.Id && (job1.Id + 1) == job2.Id);
-            /*int id = (job1.Id + 1);
-            Assert.IsTrue(id == job2.Id);*/
         }
     }
 }
