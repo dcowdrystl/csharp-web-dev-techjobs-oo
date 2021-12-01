@@ -45,10 +45,12 @@ namespace TechJobsTests
         [TestMethod]
         public void ToStringTest()
         {
-            Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-            string output = " ";
-            Assert.AreEqual(output, job1.ToString());
+            string output = $"ID: {job.Id}\n Name: {job.Name}\n Employer: {job.EmployerName}\n Location: {job.EmployerLocation}\n " +
+                $"Position Type: {job.JobType}\n Core Competency: {job.JobCoreCompetency}";
+
+            Assert.AreEqual(output, job.ToString());
         
         }
     }
