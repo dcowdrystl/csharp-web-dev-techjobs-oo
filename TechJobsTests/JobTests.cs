@@ -53,5 +53,17 @@ namespace TechJobsTests
             Assert.AreEqual(output, job.ToString());
         
         }
+
+        [TestMethod]
+        public void ToStringTestWithEmptyValues()
+        {
+            Job job = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+
+            string output = $"ID: {job.Id}\n Name: Data not available\n Employer: Data not available\n Location: Data not available\n " +
+                $"Position Type: Data not available\n Core Competency: Data not available";
+
+            Assert.AreEqual(output, job.ToString());
+
+        }
     }
 }
