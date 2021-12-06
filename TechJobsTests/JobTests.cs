@@ -21,6 +21,14 @@ namespace TechJobsTests
             Assert.IsTrue(job1.Id != job2.Id && (job1.Id + 1) == job2.Id);
         }
 
+        /*Job test_job;
+
+        [TestInitialize]
+        public void CreateJobObject()
+        {
+            test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        }*/
+
         [TestMethod]
         public void TestJobConstructorSetsAllFields()
         {
